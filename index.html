@@ -146,51 +146,51 @@
       <div class="bento-body">
         <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;">
           <!-- Professor Murase -->
-          <div style="flex: 0 0 250px; text-align: center;">
+          <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
+            data-target="member-modal-murase">
             <div
-              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent);">
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent); position: relative;">
               <img src="./original/murase.jpg" alt="村瀬 潤" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">村瀬 潤</h3>
             <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">教授 / 博士(農学)</p>
             <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
-              <a href="https://researchmap.jp/read0048563" target="_blank" class="profile-link">researchmap</a>
-              <a href="https://orcid.org/0000-0002-3932-8321" target="_blank" class="profile-link">ORCID</a>
+              <span class="profile-link-badge">詳細を見る</span>
             </div>
           </div>
           <!-- Assoc Prof Doi -->
-          <div style="flex: 0 0 250px; text-align: center;">
+          <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
+            data-target="member-modal-doi">
             <div
-              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border: 3px solid var(--glass-border);">
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border: 3px solid var(--glass-border); position: relative;">
               <span style="font-size: 2rem; color: var(--text-dim);">KD</span>
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">土井 一行</h3>
             <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">准教授 / 博士(農学)</p>
             <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
-              <a href="https://profs.provost.nagoya-u.ac.jp/html/100003859_ja.html" target="_blank"
-                class="profile-link">名大DB</a>
-              <a href="https://scholar.google.co.jp/citations?hl=ja&user=uMtSOzAAAAAJ" target="_blank"
-                class="profile-link">Scholar</a>
+              <span class="profile-link-badge">詳細を見る</span>
             </div>
           </div>
           <!-- Assistant Prof Nishiuchi -->
-          <div style="flex: 0 0 250px; text-align: center;">
+          <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
+            data-target="member-modal-nishiuchi">
             <div
-              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border: 3px solid var(--glass-border);">
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border: 3px solid var(--glass-border); position: relative;">
               <span style="font-size: 2rem; color: var(--text-dim);">SN</span>
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">西内 俊策</h3>
             <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">助教 / 博士(農学)</p>
             <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
-              <a href="https://researchmap.jp/Nishiuchi_Shunsaku" target="_blank" class="profile-link">researchmap</a>
-              <a href="https://orcid.org/0000-0003-4916-291X" target="_blank" class="profile-link">ORCID</a>
+              <span class="profile-link-badge">詳細を見る</span>
             </div>
           </div>
-          <div
-            style="flex: 0 0 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); border-radius: 16px;">
+          <!-- Students -->
+          <div class="member-card"
+            style="flex: 0 0 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); border-radius: 16px; cursor: pointer;"
+            data-target="member-modal-students">
             <div style="text-align: center;">
-              <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">20+ Students</p>
-              <p style="font-size: 0.8rem; color: var(--text-dim);">D: 3, M: 11, B: 4</p>
+              <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">Members 2024</p>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">Click for Details</p>
             </div>
           </div>
         </div>
@@ -363,6 +363,102 @@
       <p>
         特定の遺伝子を持つイネが、自分に有利な微生物を呼び寄せている可能性があります。この分子レベルからの生態系構築プロセスを解明することで、植物自体の力を引き出し、病害虫への耐性を高めたり、肥料効率を向上させたりする「微生物共生を考慮した新しいイネ育種」の可能性を拓きます。
       </p>
+    </div>
+  </template>
+  <template id="member-modal-murase">
+    <div class="modal-header">
+      <div
+        style="height: 200px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <img src="./original/murase.jpg" alt="Prof Murase"
+          style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover;">
+      </div>
+      <h2>村瀬 潤 (Prof. Jun Murase)</h2>
+    </div>
+    <div class="modal-body">
+      <h3>研究興味</h3>
+      <p>土壌微生物学、特に原生生物の多様性と機能。植物根圏における微生物生態学。水田など湿地土壌におけるメタン代謝に関与する微生物の生態。</p>
+      <h3>自己紹介・メッセージ</h3>
+      <p>学生の頃からお世話になっている東郷フィールドに、2019年から教員としてお世話になることになりました。車で通勤しています。フィールドに近いこと、国際色豊かなことが自慢です。</p>
+      <p><strong>趣味:</strong> 弓道<br><strong>推しイネ:</strong> KDML105（香り米）</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://researchmap.jp/read0048563" target="_blank" class="profile-link">researchmap</a>
+        <a href="https://orcid.org/0000-0002-3932-8321" target="_blank" class="profile-link">ORCID</a>
+      </div>
+    </div>
+  </template>
+
+  <template id="member-modal-doi">
+    <div class="modal-header">
+      <div
+        style="height: 200px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <div
+          style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); background: #eee; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #aaa;">
+          KD</div>
+      </div>
+      <h2>土井 一行 (Assoc. Prof. Kazuyuki Doi)</h2>
+    </div>
+    <div class="modal-body">
+      <h3>研究興味</h3>
+      <p>イネの遺伝解析。最近は実用形質の評価法の自動化など。</p>
+      <h3>自己紹介・メッセージ</h3>
+      <p>「自分の研究ができる幸せ。でも世の中は広い。頑張らねば。」<br>東郷フィールドには、イネだけじゃなく、野菜も家畜もいます。ここでの経験は貴重です。研究室の雰囲気は「自由」です。</p>
+      <p><strong>趣味:</strong> 研究（といいたいところですが釣りです）<br><strong>推しイネ:</strong> カルローズ、日本晴</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://profs.provost.nagoya-u.ac.jp/html/100003859_ja.html" target="_blank"
+          class="profile-link">名大DB</a>
+        <a href="https://scholar.google.co.jp/citations?hl=ja&user=uMtSOzAAAAAJ" target="_blank"
+          class="profile-link">Scholar</a>
+      </div>
+    </div>
+  </template>
+
+  <template id="member-modal-nishiuchi">
+    <div class="modal-header">
+      <div
+        style="height: 200px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <div
+          style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); background: #eee; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #aaa;">
+          SN</div>
+      </div>
+      <h2>西内 俊策 (Assist. Prof. Shunsaku Nishiuchi)</h2>
+    </div>
+    <div class="modal-body">
+      <h3>研究興味</h3>
+      <p>栽培履歴に基づいた作物栽培における意思決定支援。リモートセンシング技術と育種・生産現場の橋渡し。農業現場における画像解析・機械学習を用いたスマート農業技術基盤の開発。</p>
+      <h3>自己紹介・メッセージ</h3>
+      <p>変化の激しい農業の時代において、新しい技術や理論を積極的に取り入れ、学術的な問いと社会的なニーズの両方に応えることを目指しています。フィールドを使ってデータを出し、仮説を検証できる自由な環境が魅力です。</p>
+      <p><strong>趣味:</strong> 釣り（あまり行けていませんが）</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://researchmap.jp/Nishiuchi_Shunsaku" target="_blank" class="profile-link">researchmap</a>
+        <a href="https://orcid.org/0000-0003-4916-291X" target="_blank" class="profile-link">ORCID</a>
+      </div>
+    </div>
+  </template>
+
+  <template id="member-modal-students">
+    <div class="modal-header">
+      <div
+        style="height: 150px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <h2 style="margin: 0; color: var(--accent);">Student Members (2024)</h2>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-light); margin-bottom: 0.5rem;">Doctoral Course (博士課程)</h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">3名</p>
+          <p style="font-size: 0.9rem; color: var(--text-dim);">留学生: ミャンマー / 国内進学</p>
+        </div>
+        <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-light); margin-bottom: 0.5rem;">Master's Course (修士課程)</h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">11名</p>
+          <p style="font-size: 0.9rem; color: var(--text-dim);">留学生: インドネシア, 中国 / 国内進学</p>
+        </div>
+        <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-light); margin-bottom: 0.5rem;">Undergraduate (学部生)</h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">4名</p>
+        </div>
+      </div>
     </div>
   </template>
 </body>

@@ -848,6 +848,7 @@ footer {
   /* Truncate text */
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 0;
@@ -876,4 +877,20 @@ footer {
 .research-card:hover::after {
   opacity: 1;
   transform: scale(1);
+}
+
+.profile-link-badge {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  border: 1px solid var(--glass-border);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  background: var(--bg-subtle);
+  transition: var(--transition);
+}
+
+.member-card:hover .profile-link-badge {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }

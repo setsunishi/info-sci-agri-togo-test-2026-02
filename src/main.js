@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
 const modalOverlay = document.getElementById('modal-overlay');
 const modalContent = document.getElementById('modal-content');
 const modalClose = document.querySelector('.modal-close');
-const researchCards = document.querySelectorAll('.research-card');
+const researchCards = document.querySelectorAll('.research-card, .member-card');
 
 function openModal(targetId) {
   const template = document.getElementById(targetId);
