@@ -96,12 +96,14 @@
     <section id="research-tile" class="bento-item glass reveal">
       <div class="bento-header">
         <h2>Research Themes</h2>
-        <span style="font-size: 0.8rem; color: var(--text-dim);">Click to expand</span>
+        <span id="research-expand-text"
+          style="font-size: 0.8rem; color: var(--accent); cursor: pointer; border-bottom: 1px dotted var(--accent);">Click
+          to expand (+4)</span>
       </div>
       <div class="bento-body">
         <!-- Dynamic Grid Container -->
         <div id="research-grid" class="grid"
-          style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); min-height: 250px;">
+          style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); min-height: 80px;">
           <!-- Content will be loaded by JS -->
         </div>
         <div style="text-align: center; margin-top: 1rem;">

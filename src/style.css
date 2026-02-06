@@ -695,6 +695,23 @@ footer {
   .hero h1 {
     font-size: 2.5rem;
   }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    /* Force 1 column track */
+    padding: 6rem 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .bento-item {
+    grid-column: span 1 !important;
+    /* Override any specific spans */
+  }
+
+  /* Specific fix for research cards grid on mobile to avoid 2-column cramping */
+  #research-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .profile-link {

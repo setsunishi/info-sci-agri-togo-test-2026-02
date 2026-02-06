@@ -229,21 +229,32 @@ function startShuffle() {
 if (researchGrid && expandBtn) {
   startShuffle();
 
-  expandBtn.addEventListener('click', () => {
+  const toggleExpand = () => {
     isExpanded = !isExpanded;
+    const expandText = document.getElementById('research-expand-text');
+
     if (isExpanded) {
       clearInterval(shuffleInterval);
       renderThemes([0, 1, 2, 3, 4, 5, 6]); // Show all
       expandBtn.textContent = '閉じる (Shuffleに戻る)';
       expandBtn.style.background = 'var(--accent)';
       expandBtn.style.color = 'white';
+      if (expandText) expandText.textContent = 'Close';
     } else {
       expandBtn.textContent = '全ての研究テーマを見る (+4)';
       expandBtn.style.background = '';
       expandBtn.style.color = '';
+      if (expandText) expandText.textContent = 'Click to expand (+4)';
       startShuffle();
     }
-  });
+  };
+
+  expandBtn.addEventListener('click', toggleExpand);
+
+  const headerExpandLink = document.getElementById('research-expand-text');
+  if (headerExpandLink) {
+    headerExpandLink.addEventListener('click', toggleExpand);
+  }
 }
 
 // --- Hero Slideshow Logic ---
