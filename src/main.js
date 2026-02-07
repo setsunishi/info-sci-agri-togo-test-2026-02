@@ -296,6 +296,99 @@ if (researchGrid && expandBtn) {
   if (headerExpandLink) headerExpandLink.addEventListener('click', toggleExpand);
 }
 
+// --- Gallery Logic ---
+const galleryImages = [
+  './gallery/gallery_field_1.jpg',
+  './gallery/gallery_field_2.jpg',
+  './gallery/gallery_research.jpg',
+  './gallery/gallery_drone.jpg',
+  './gallery/gallery_plants_1.jpg',
+  './gallery/gallery_harvest.jpg',
+  './gallery/gallery_harvest_2.jpg',
+  './gallery/gallery_lecture.png',
+  './gallery/gallery_poster.png',
+  './gallery/gallery_group.jpg',
+  './gallery/gallery_landscape.jpg',
+  './hero/hero_aerial.jpg'
+];
+
+const galleryGrid = document.getElementById('gallery-grid');
+const galleryExpandBtn = document.getElementById('gallery-expand-btn');
+const galleryExpandText = document.getElementById('gallery-expand-text');
+let isGalleryExpanded = false;
+let galleryShuffleInterval;
+
+function renderGallery(indices) {
+  if (!galleryGrid) return;
+  galleryGrid.innerHTML = indices.map(i => `
+    <div class="gallery-item-wrapper" style="border-radius: 12px; overflow: hidden; height: 180px; position: relative; transition: opacity 0.5s ease;">
+      <img src="${galleryImages[i]}" alt="Gallery Image" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+    </div>
+  `).join('');
+}
+
+function startGalleryShuffle() {
+  // Initial 4 images
+  let currentIndices = [0, 1, 2, 3];
+  renderGallery(currentIndices);
+
+  if (galleryShuffleInterval) clearInterval(galleryShuffleInterval);
+
+  galleryShuffleInterval = setInterval(() => {
+    if (isGalleryExpanded) return;
+
+    // Pick a random slot (0-3) to update
+    const slotToUpdate = Math.floor(Math.random() * 4);
+
+    // Pick a new image index not currently shown
+    let newImageIndex;
+    do {
+      newImageIndex = Math.floor(Math.random() * galleryImages.length);
+    } while (currentIndices.includes(newImageIndex));
+
+    currentIndices[slotToUpdate] = newImageIndex;
+
+    const items = galleryGrid.querySelectorAll('.gallery-item-wrapper');
+    if (items[slotToUpdate]) {
+      const item = items[slotToUpdate];
+      const img = item.querySelector('img');
+      item.style.opacity = '0';
+
+      setTimeout(() => {
+        img.src = galleryImages[newImageIndex];
+        item.style.opacity = '1';
+      }, 500);
+    }
+  }, 5000); // 5 seconds
+}
+
+if (galleryGrid) {
+  startGalleryShuffle();
+
+  const toggleGalleryExpand = () => {
+    isGalleryExpanded = !isGalleryExpanded;
+    if (isGalleryExpanded) {
+      clearInterval(galleryShuffleInterval);
+      // Show all images
+      renderGallery(Array.from({ length: galleryImages.length }, (_, i) => i));
+
+      galleryExpandBtn.textContent = '閉じる (Shuffleに戻る)';
+      galleryExpandBtn.style.background = 'var(--accent)';
+      galleryExpandBtn.style.color = 'white';
+      if (galleryExpandText) galleryExpandText.textContent = 'Close';
+    } else {
+      galleryExpandBtn.textContent = `全ての写真を見る (+${galleryImages.length - 4})`;
+      galleryExpandBtn.style.background = '';
+      galleryExpandBtn.style.color = '';
+      if (galleryExpandText) galleryExpandText.textContent = `Click to expand (+${galleryImages.length - 4})`;
+      startGalleryShuffle();
+    }
+  };
+
+  if (galleryExpandBtn) galleryExpandBtn.addEventListener('click', toggleGalleryExpand);
+  if (galleryExpandText) galleryExpandText.addEventListener('click', toggleGalleryExpand);
+}
+
 // --- Hero Slideshow Logic ---
 const heroImages = document.querySelectorAll('.hero-bg img');
 if (heroImages.length > 0) {
