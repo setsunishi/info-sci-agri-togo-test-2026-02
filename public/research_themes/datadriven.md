@@ -1,6 +1,6 @@
 # データ駆動型作物モデル開発
 
-![Main Image](/research_themes/datadriven.png)
+![Main Image](./datadriven.png)
 
 気象、植物の生育状況、土壌成分、遺伝子情報など、多岐にわたる農業データを情報科学的なアプローチで活用します。
 

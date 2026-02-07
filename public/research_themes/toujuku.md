@@ -1,6 +1,6 @@
 # イネの登熟に関する遺伝解析
 
-![Main Image](/research_themes/toujuku.jpg)
+![Main Image](./toujuku.jpg)
 
 多収を狙ってイネの穂を大きくすると、「実のつまり」が悪くなります。このイネの登熟に関する有用遺伝子を探索しています。
 

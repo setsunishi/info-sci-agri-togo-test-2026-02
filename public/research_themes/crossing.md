@@ -1,6 +1,6 @@
 # イネ遺伝解析材料および育種素材の開発と農業形質に関与するQTLの探索
 
-![Main Image](/research_themes/crossing.jpg)
+![Main Image](./crossing.jpg)
 
 イネの多種多様な遺伝資源を活用し、新技術を用いた効率的な品種開発と、農業的に重要な形質（収量、品質、耐病性など）を支配する遺伝子領域（QTL: Quantitative Trait Loci）の同定を目指しています。
 

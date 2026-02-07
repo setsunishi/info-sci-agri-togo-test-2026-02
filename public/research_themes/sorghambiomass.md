@@ -1,7 +1,7 @@
 # センシングによる経時的な環境や生体情報の獲得
 
-![Main Image](/research_themes/sorghambiomass.jpg)
+![Main Image](./sorghambiomass.jpg)
 
 農業生産現場における「個体の声」を可視化するため、最新のセンシング技術とICT（情報通信技術）を統合したスマート農業の研究を推進しています。圃場に設置した各種センサーや、ドローンを用いたリモートセンシングを活用し、土壌水分、光量、気象、そして植物自体の形態的・生理的な変化をリアルタイムで継続的に計測します。
 
-[SubImage](/research_themes/sorgham.jpg)
+[SubImage](./sorgham.jpg)
