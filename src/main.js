@@ -156,11 +156,12 @@ async function openModal(targetId) {
       let text = await response.text();
 
       // Fix relative image paths in markdown
-      // "./image.jpg" -> "./research_themes/image.jpg" (since we are at root)
-      // But standard markdown parsed from text might not know the context.
-      // Better: Replace "./" with "./research_themes/" for images in the markdown text
-      // because the images are in the same folder as the markdown file.
-      text = text.replace(/!\[(.*?)\]\(\.\/(.*?)\)/g, '![$1](./research_themes/$2)');
+      // "./image.jpg" -> "/repo-name/research_themes/image.jpg"
+      // Use import.meta.env.BASE_URL to get the correct base path (e.g., "/info-sci-agri-togo-test-2026-02/")
+      const baseUrl = import.meta.env.BASE_URL;
+      text = text.replace(/!\[(.*?)\]\(\.\/(.*?)\)/g, (match, p1, p2) => {
+        return `![${p1}](${baseUrl}research_themes/${p2})`;
+      });
 
       const htmlContent = marked.parse(text);
 
