@@ -427,3 +427,15 @@ modalOverlay.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
 });
+
+// --- Contact Email Obfuscation ---
+const contactBtn = document.getElementById('contact-email-btn');
+if (contactBtn) {
+  contactBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const users = ['murase', 'kdoi', 's_nishi'];
+    const domain = 'agr.nagoya-u.ac.jp';
+    const address = users.map(u => `${u}@${domain}`).join(',');
+    window.location.href = `mailto:${address}`;
+  });
+}
