@@ -324,13 +324,8 @@ nav.scrolled {
   grid-column: span 12;
 }
 
-#publications-tile {
-  grid-column: span 6;
-  grid-row: span 3;
-}
-
 #gallery-tile {
-  grid-column: span 6;
+  grid-column: span 12;
   grid-row: span 3;
 }
 
@@ -416,25 +411,7 @@ section {
 }
 
 /* Publications List */
-.pub-item {
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--glass-border);
-  transition: var(--transition);
-}
 
-.pub-item:hover {
-  background: var(--bg-subtle);
-  border-radius: 12px;
-  padding-left: 2rem;
-}
-
-.pub-year {
-  font-weight: 700;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 0.5rem;
-}
 
 /* Team Grid */
 .team-grid {
