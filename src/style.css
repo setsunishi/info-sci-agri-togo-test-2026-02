@@ -932,3 +932,17 @@ footer {
   color: white;
   border-color: var(--accent);
 }
+
+/* Expanded Members View */
+#members-container.expanded {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  overflow-x: visible !important;
+  flex-wrap: wrap;
+  /* Fallback */
+}
+
+#members-container.expanded .member-card {
+  flex: auto !important;
+  width: auto !important;
+}

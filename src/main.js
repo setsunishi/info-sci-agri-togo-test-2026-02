@@ -445,3 +445,18 @@ if (contactBtn) {
     window.location.href = `mailto:${address}`;
   });
 }
+
+// --- Members Expand Logic ---
+const membersExpandBtn = document.getElementById('members-expand-btn');
+const membersContainer = document.getElementById('members-container');
+
+if (membersExpandBtn && membersContainer) {
+  membersExpandBtn.addEventListener('click', () => {
+    membersContainer.classList.toggle('expanded');
+    if (membersContainer.classList.contains('expanded')) {
+      membersExpandBtn.textContent = 'Close';
+    } else {
+      membersExpandBtn.textContent = 'Show All';
+    }
+  });
+}

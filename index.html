@@ -130,9 +130,13 @@
     <section id="team-tile" class="bento-item glass reveal">
       <div class="bento-header">
         <h2>Members</h2>
+        <span id="members-expand-btn"
+          style="font-size: 0.8rem; color: var(--accent); cursor: pointer; border-bottom: 1px dotted var(--accent);">Show
+          All</span>
       </div>
       <div class="bento-body">
-        <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;">
+        <div id="members-container"
+          style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin; transition: all 0.3s ease;">
           <!-- Professor Murase -->
           <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
             data-target="member-modal-murase">
